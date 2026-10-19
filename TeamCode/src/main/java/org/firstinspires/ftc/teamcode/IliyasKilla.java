@@ -121,9 +121,7 @@ public class IliyasKilla extends LinearOpMode {
         // dashboard
         FtcDashboard.getInstance().setTelemetryTransmissionInterval(25);
 
-        FtcDashboard.getInstance().addAction("Reset heading", "Takes the way the robot faces now as forward for driving. Does not move it.", this::ResetHeading);
-        FtcDashboard.getInstance().addAction("Hold position here", "Holds the robot on the spot it stands on now. Only pushes back while PositionMax is above 0.", this::StartHold);
-        FtcDashboard.getInstance().addAction("Heading step", "Turns the robot by StepDegrees and holds it there, to see how well turning settles. Moves the robot.", this::StepHeading);
+        // FtcDashboard.addAction needs dashboard newer than 0.6.0 — skipped for now
 
         telemetry.addLine("Ready");
         telemetry.update();

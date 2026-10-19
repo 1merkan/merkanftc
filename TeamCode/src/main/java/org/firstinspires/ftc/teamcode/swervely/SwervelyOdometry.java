@@ -88,9 +88,7 @@ public class SwervelyOdometry extends LinearOpMode {
         // 40 updates a second instead of 10, so the live readout on the laptop doesnt look choppy
         FtcDashboard.getInstance().setTelemetryTransmissionInterval(25);
 
-        // a press runs inside sendTelemetryPacket below, on this thread, so it never lands
-        // halfway through a loop
-        FtcDashboard.getInstance().addAction("Reset odometry", "Sets the position and heading back to zero. Keep the robot still when you press it.", this::Reset);
+        // FtcDashboard.addAction needs dashboard newer than 0.6.0 — skipped for now
 
         // nothing ever moves, so there is no reason to wait for start
         while (!isStopRequested()) {

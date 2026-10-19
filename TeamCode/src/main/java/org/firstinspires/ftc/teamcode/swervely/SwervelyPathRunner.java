@@ -104,9 +104,7 @@ public class SwervelyPathRunner extends LinearOpMode {
         // 40 updates a second instead of 10, so the robot moves smoothly on the laptop's field
         FtcDashboard.getInstance().setTelemetryTransmissionInterval(25);
 
-        // a press runs inside sendTelemetryPacket, on this thread, so it never lands halfway
-        // through a pedro update
-        FtcDashboard.getInstance().addAction("Stop path", "Stops following the path and brakes the wheels where the robot is.", this::StopPath);
+        // FtcDashboard.addAction needs dashboard newer than 0.6.0 — skipped for now
 
         // the robot is carried to its start during init, so keep showing where it is
         while (opModeInInit()) {
