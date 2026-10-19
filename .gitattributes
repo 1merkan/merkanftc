@@ -1,0 +1,32 @@
+# Normalize line endings so Windows + macOS teammates don't fight over CRLF/LF.
+* text=auto
+
+# Text files: always LF in the repo.
+*.java text eol=lf
+*.gradle text eol=lf
+*.xml text eol=lf
+*.md text eol=lf
+*.properties text eol=lf
+*.pro text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+
+# Windows batch files need CRLF to run correctly.
+*.bat text eol=crlf
+
+# Binary files: never touch.
+*.jar binary
+*.aar binary
+*.apk binary
+*.aab binary
+*.ap_ binary
+*.dex binary
+*.keystore binary
+*.jks binary
+*.so binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
